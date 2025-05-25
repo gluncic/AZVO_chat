@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="hr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <title>AZVO Chat</title>
+
+  <!-- Roboto 100, 300, 400 -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+
+  <!-- PDF export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <!-- Tema: tamna/svijetla -->
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const current = root.classList.contains('dark');
+      root.classList.toggle('dark', !current);
+      localStorage.setItem('theme', !current ? 'dark' : 'light');
+    }
+
+    window.onload = () => {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;
+    }
+  </style>
+
+  <script>
+    function formatTime() {
+      const now = new Date();
+      return now.toLocaleTimeString("hr-HR", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+      });
+    }
+
+    async function sendMessage() {
+      const input = document.getElementById("question");
+      const question = input.value.trim();
+      if (!question) return;
+      input.value = "";
+
+      const chatBox = document.getElementById("chat-box");
+
+      chatBox.innerHTML += `
+        <div class="flex justify-end mb-2">
+          <div class="text-xs text-gray-500 mr-2 mt-1">${formatTime()}</div>
+          <div class="bg-blue-700 text-gray-200 px-4 py-2 rounded-xl max-w-[85%] font-light">
+            ${question}
+          </div>
+        </div>
+      `;
+      chatBox.scrollTop = chatBox.scrollHeight;
+
+      try {
+        const response = await fetch("/chat", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({question})
+        });
+        const data = await response.json();
+
+        chatBox.innerHTML += `
+          <div class="flex justify-start mb-4">
+            <div class="bg-white dark:bg-transparent text-gray-900 dark:text-gray-200 font-light leading-relaxed whitespace-pre-line px-0 py-0 max-w-[95%]">
+              ${data.formatted}
+            </div>
+            <div class="text-xs text-gray-500 ml-2 mt-1">${formatTime()}</div>
+          </div>
+        `;
+        chatBox.scrollTop = chatBox.scrollHeight;
+      } catch (error) {
+        chatBox.innerHTML += `
+          <div class="flex justify-start mb-4">
+            <div class="bg-red-600 text-gray-200 px-4 py-3 rounded-lg max-w-[85%]">
+              <b>Greška:</b> Nije moguće dobiti odgovor od servera.
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function clearChat() {
+      document.getElementById("chat-box").innerHTML = "";
+    }
+
+    function saveChatAsPDF() {
+      const element = document.getElementById("chat-box");
+      const now = new Date();
+      const timestamp = now.toISOString().slice(0, 16).replace("T", "_").replace(":", "-");
+
+      const opt = {
+        margin: 0.5,
+        filename: `AZVO_chat_${timestamp}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+
+      html2pdf().set(opt).from(element).save();
+    }
+  </script>
+</head>
+
+<body class="bg-white dark:bg-[#1e1e1e] text-black dark:text-gray-200 h-screen flex flex-col items-center pt-16">
+
+  <!-- Header -->
+  <header class="w-full bg-white dark:bg-[#151515] text-black dark:text-white shadow-md py-3 px-6 border-b border-gray-200 dark:border-gray-800 fixed top-0 z-50 flex justify-between items-center">
+    <div class="text-lg font-semibold">AZVO – postani student chat</div>
+    <button onclick="toggleTheme()" class="text-sm px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+      🌓 Tema
+    </button>
+  </header>
+
+  <!-- Chat sadržaj -->
+  <div class="w-full max-w-3xl flex flex-col h-full">
+    <div id="chat-box" class="p-6 overflow-y-auto flex-grow border-b border-gray-300 dark:border-gray-800"></div>
+
+  <div class="w-full mt-4 mb-6 space-y-2">
+    <div class="flex mb-2">
+        <input id="question" type="text"
+               class="flex-grow px-4 py-2 rounded bg-gray-200 dark:bg-[#3a3f44] text-black dark:text-gray-200 focus:outline-none"
+               placeholder="Upiši pitanje..." onkeydown="if(event.key==='Enter'){sendMessage()}">
+        <button onclick="sendMessage()" class="ml-2 px-4 py-2 bg-blue-700 rounded text-gray-200 hover:bg-blue-800">
+          Pošalji
+        </button>
+      </div>
+      <div class="flex justify-end gap-4 text-sm text-gray-500 dark:text-gray-400">
+        <button onclick="clearChat()" class="flex items-center gap-1 hover:text-black dark:hover:text-white">
+          🗑️ Očisti sve
+        </button>
+        <button onclick="saveChatAsPDF()" class="hover:text-black dark:hover:text-white">
+          💾 Sačuvaj kao PDF
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

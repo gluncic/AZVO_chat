@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.log
+.env
+azvo_baza/
+kalendari_raspakirani.json
