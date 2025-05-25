@@ -2,5 +2,4 @@ __pycache__/
 *.pyc
 *.log
 .env
-azvo_baza/
-kalendari_raspakirani.json
+azvo_baza/**/*.bin

@@ -1,0 +1,152 @@
+[
+  {
+    "tip": "prijediplomski",
+    "rok": "prvi",
+    "datum": "2025-02-01T09:00:00",
+    "opis": "Veljača 1.2.2025. u 9:00 h početak prijava za upis na studijske programe početak promjene liste prioriteta studijskih programa"
+  }, 
+  {
+    "tip": "prijediplomski",
+    "rok": "prvi",
+    "datum": "2024-12-01T00:00:00",
+    "opis": "1.12.2024. Središnji prijavni ured započinje sa zaprimanjem dokumentacije kandidata potrebne za prijavu studijskih programa početak zaprimanja dokaza o pravu prednosti (dostavlja se Središnjem prijavnom uredu)"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "prvi",
+    "datum": "2025-04-28T00:00:00",
+    "opis": "Travanj 28.4.2025. u 9:00 sati objava orijentacijskih rang-lista prijave za upis na studijske programe u tijeku"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "prvi",
+    "datum": "2025-05-22T00:00:00",
+    "opis": "Svibanj 22.5.2025. zadnji dan za slanje dokumentacije za kandidate koji su završili srednje obrazovanje u RH prije 2010. godine, u inozemstvu do 31.12.2024., godine te zadnji rok za dostavu svjedodžbi 1-4. razreda za one koji srednje obrazovanje završavaju u inozemstvu (osim BiH) 2025. godine, a prijavljuju ispite državne mature"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "prvi",
+    "datum": "2025-07-01T00:00:00",
+    "opis": "Srpanj 1.7.2025.zadnji dan za slanje dokumentacije ako visoko učilište nije odredilo raniji rok za prijavu studija za kandidate koji ne prijavljuju ispite državne mature** zadnji dan za registraciju kandidata u ljetnom upisnom roku do 23:59 h"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "prvi",
+    "datum": "2025-07-07T00:00:00",
+    "opis": "7.7.2025. zadnji dan za slanje dokaza o pravu prednosti"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "prvi",
+    "datum": "2025-07-09T00:00:00",
+    "opis": "9.7.2025. 14:00 h objava privremenih rang-lista za upis na studijske programe"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "prvi",
+    "datum": "2025-07-16T00:00:00",
+    "opis": "16.7.2025. zadnji dan prijava za upis na studijske programe do 13:59 h zadnji dan promjene liste prioriteta i brisanja studijskih programa do 13:59 h objava konačnih rang-lista za upis na studijske programe iza 15:00 h"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "prvi",
+    "datum": "2025-07-16T00:00:00",
+    "opis": "17.7.2025. visoka učilišta započinju s upisima"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "drugi",
+    "datum": "2025-07-21T00:00:00",
+    "opis": "Srpanj 21.7.2025. početak registracije kandidata u jesenskom upisnom roku"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "drugi",
+    "datum": "2025-07-21T00:00:00",
+    "opis": "21.7.2025. početak prijava za upis na studijske programe u 12:00h početak promjene liste prioriteta studijskih programa"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "drugi",
+    "datum": "2025-07-28T00:00:00",
+    "opis": "28.7.2025. Središnji prijavni ured započinje sa zaprimanjem dokumentacije kandidata potrebne za prijavu studijskih programa početak zaprimanja dokaza o pravu prednosti (dostavlja se Središnjem prijavnom uredu) objava orijentacijskih rang-lista u 12.00 h"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "drugi",
+    "datum": "2025-09-05T00:00:00",
+    "opis": "Rujan 5.9.2025. zadnji dan za slanje dokumentacije ako visoko učilište nije odredilo raniji rok za prijavu studija** zadnji dan za slanje dokaza o pravu prednosti zadnji dan za registraciju kandidata u jesenskom upisnom roku do 23:59 h"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "drugi",
+    "datum": "2025-09-10T00:00:00",
+    "opis": "10.9.2025. 14:00 h objava privremenih rang-lista za upis na studijske programe"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "drugi",
+    "datum": "2025-09-17T00:00:00",
+    "opis": "17.9.2025. zadnji dan prijava za upis na studijske programe do 13:59 h* zadnji dan promjene liste prioriteta i brisanja studijskih programa do 13:59 h objava konačnih rang-lista za upis na studijske programe iza 15:00 h"
+  },
+  {
+    "tip": "prijediplomski",
+    "rok": "drugi",
+    "datum": "2025-09-18T00:00:00",
+    "opis": "18.9.2025. visoka učilišta započinju s upisima"
+  },
+  {
+    "tip": "diplomski",
+    "rok": "glavni upisni rok",
+    "datum": "2025-07-01T00:00:00",
+    "opis": "Srpanj 01.07.2025. u 10.00 sati objava uvjeta upisa na diplomski.studij.hr i početak prijava studijskih programa. Središnji prijavni ured započinje sa zaprimanjem dokumentacije kandidata potrebne za prijavu studijskih programa."
+  },
+  {
+    "tip": "diplomski",
+    "rok": "glavni upisni rok",
+    "datum": "2025-09-06T00:00:00",
+    "opis": "Rujan 06.09.2025. zadnji dan za slanje dokumentacije potrebne za prijavu studijskih programa za kandidate koji su već završili prijediplomski studij"
+  },
+  {
+    "tip": "diplomski",
+    "rok": "glavni upisni rok",
+    "datum": "2025-09-22T00:00:00",
+    "opis": "kandidati koji imaju obranu završnog rada u rujnu 2023. godine prijepis ocjena dostavljaju do 6.9., a preostali dio dokumentacije do 22.9.2025."
+  },
+  {
+    "tip": "diplomski",
+    "rok": "glavni upisni rok",
+    "datum": "2025-09-11T00:00:00",
+    "opis": "11.09.2025. zadnji dan za prijavu neistovrsnih studija"
+  },
+  {
+    "tip": "diplomski",
+    "rok": "glavni upisni rok",
+    "datum": "2025-09-22T00:00:00",
+    "opis": "22.09.2025. u 12.00 sati – objava privremenih rang listi zadnji dan za slanje preostale dokumentacije za kandidate koji imaju obranu završnog rada u rujnu 2025. godine"
+  },
+  {
+    "tip": "diplomski",
+    "rok": "glavni upisni rok",
+    "datum": "2025-09-28T00:00:00",
+    "opis": "28.09.2025. u 14.00 sati – završava rok za unos rezultata dodatne provjere, posebnih postignuća i odobravanje kandidata s neistovrsnim prijediplomskim studijskim programima (unose visoka učilišta)"
+  },
+  {
+    "tip": "diplomski",
+    "rok": "glavni upisni rok",
+    "datum": "2025-09-29T00:00:00",
+    "opis": "29.09.2025. 12.00 sati – završava rok za prijavu i odjavu studijskih programa te promjenu liste prioriteta u NISpDS 16:00 sati – rok za evidenciju i unos podataka o završetku studija u ISVU 22:00 sata – zadnje prebacivanje podataka iz ISVU-a u NISpDS"
+  },
+  {
+    "tip": "diplomski",
+    "rok": "glavni upisni rok",
+    "datum": "2023-09-30T00:00:00",
+    "opis": "30.09.2023. 15.00 sati – objava konačnih rang-lista za upise na studijske programe"
+  },
+  {
+    "tip": "diplomski",
+    "rok": "glavni upisni rok",
+    "datum": "2025-10-02T00:00:00",
+    "opis": "Listopad od 2.10.2025. upisi na visoka učilišta"
+  }
+]
