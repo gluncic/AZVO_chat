@@ -20,12 +20,12 @@ app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
 embedding = OpenAIEmbeddings(api_key=API_KEY)
-vectordb = Chroma(persist_directory='./azvo_baza', collection_name='clanci_novo', embedding_function=embedding)
+vectordb = Chroma(persist_directory='./azvo_baza', collection_name='pravilnik', embedding_function=embedding)
 vectordb2 = Chroma(persist_directory='./azvo_baza', collection_name='pitanja', embedding_function=embedding)
 with open("kalendari_raspakirani.json", "r") as f: kalendar = json.load(f)
 
-retriever = vectordb.as_retriever(search_type='similarity', search_kwargs={'k': 10})
-retriever2 = vectordb2.as_retriever(search_type='similarity', search_kwargs={'k': 10})
+retriever = vectordb.as_retriever(search_type='similarity', search_kwargs={'k': 7})
+retriever2 = vectordb2.as_retriever(search_type='similarity', search_kwargs={'k': 7})
 
 prompt = ChatPromptTemplate.from_template( """
         Ti si pomoćnik koji pomaže ljudima s informacijama o upisu na fakultet.
