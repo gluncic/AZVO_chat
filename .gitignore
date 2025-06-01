@@ -2,4 +2,3 @@ __pycache__/
 *.pyc
 *.log
 .env
-azvo_baza/**/*.bin
